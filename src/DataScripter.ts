@@ -135,11 +135,11 @@ export class DataScripter {
                 }
                 switch (this._datatypes[i]) {
                     case "nvarchar":
-                    case "char":
                     case "nchar":
                     case "ntext":
                         rowData.push(`N'${this.escapeSingleQuotes(row[i].displayValue)}'`);
                         break;
+                    case "char":
                     case "varchar":
                     case "text":
                     case "xml":
